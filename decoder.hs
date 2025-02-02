@@ -104,13 +104,13 @@ mySucc (instruction, state, dummy) code
 
 main :: IO ()
 main = do
-    putStrLn "Enter program numbers separated by spaces:"
+    --putStrLn "Enter program numbers separated by spaces:"
     input <- getLine  -- Read the input line
     let numbers = map read (words input) :: [Int]  -- Split and convert to Int
-    putStrLn "enter input numbers seperated by spaces:"
-    input <- getLine
-    let inputs = map read (words input) :: [Natural]
+    --putStrLn "enter input numbers seperated by spaces:"
+    --input <- getLine
+    --let inputs = map read (words input) :: [Natural]
     mapM_ putStrLn (map getInstruction numbers)  -- Print each number on a separate line
     --print inputs
     --snap (0, initialState inputs) numbers 10
-    print $ (take 10  (snd2 $ snap (0, initialState inputs, False) numbers))
+    --print $ (take 10  (snd2 $ snap (0, initialState inputs, False) numbers))
